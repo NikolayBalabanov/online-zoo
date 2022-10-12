@@ -391,7 +391,8 @@ a {
     background-position: 0px 11px;
     background-repeat: no-repeat;
     background-size: 13px 13px;
-    background-image: url("../../assets/icons/bamboo.svg");
+    background-image: none;
+    animation: show 0.3s ease-in-out;
   }
 
   .logo--active svg {
@@ -461,6 +462,7 @@ a {
 
   .burger--active {
     color: var(--color-orang-text);
+    animation: show 0.3s ease-in-out;
   }
 
   .burger--active::before {
@@ -496,14 +498,16 @@ a {
     visibility: hidden;
     background-color: var(--color-white);
     pointer-events: none;
-    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(-101%);
   }
 
   .header__nav--active {
     opacity: 1;
     visibility: visible;
     pointer-events: inherit;
-    transition: visibility 0.15s ease-in-out, opacity 0.15s ease-in-out;
+    transition: visibility 0.15s ease-in-out, opacity 0.15s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(0);
   }
 
   .nav-wrapp--active {
@@ -1409,7 +1413,12 @@ a {
   .pets__list {
     display: flex;
     flex-direction: column;
+  }
 
+  .pets__item {
+    opacity: 1;
+    filter: grayscale(0);
+    transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
   }
 
   .pets__item:first-child {

@@ -129,101 +129,101 @@ function petsSlider() {
         progress() {
           console.log('йцуйцфывфцв')
         },
-        slideChange: function () {
+        // slideChange: function () {
 
-          const petsCardData = [
-            {
-              image: "../../assets/images/pandas.jpg",
-              alt: "Giant Pandas",
-              title: "giant Pandas",
-              native: "Native to&nbsp;Southwest China",
-              text: "Giant pandas are bears and are members of&nbsp;the Order Carnivora.",
-              vegan: true,
-            },
-            {
-              image: "../../assets/images/sloth.jpg",
-              alt: "Sloth",
-              title: "Two-toed Sloth",
-              native: "Mesoamerica, South America",
-              text: "Sloths&mdash;the sluggish tree-dwellers of&nbsp;Central and South America&mdash;spend their lives in&nbsp;the tropical rain forests.",
-              vegan: true,
-            },
-            {
-              image: "../../assets/images/eagle.jpg",
-              alt: "Eagles",
-              title: "Eagles",
-              native: "Native to&nbsp;South America",
-              text: "Eagles choose a&nbsp;mate for life. They build large and strong nests, using branches.",
-              vegan: false,
-            },
-            {
-              image: "../../assets/images/cheetah.jpg",
-              alt: "Cheetahs",
-              title: "cheetahs",
-              native: "Native to&nbsp;Africa",
-              text: "Adult life for a&nbsp;cheetah in&nbsp;the wild is&nbsp;difficult.",
-              vegan: false,
-            },
-            {
-              image: "../../assets/images/gorilla.jpg",
-              alt: "Gorillas",
-              title: "Gorillas",
-              native: "Native to&nbsp;Congo",
-              text: "There are two species of&nbsp;gorilla, each containing two subspecies.",
-              vegan: true,
-            },
-            {
-              image: "../../assets/images/penguin.jpg",
-              alt: "Penguins",
-              title: "Penguins",
-              native: "Native to&nbsp;Antarctica",
-              text: "Penguins are a&nbsp;family of&nbsp;17&nbsp;to&nbsp;19&nbsp;species of&nbsp;birds that live primarily in&nbsp;the Southern Hemisphere.",
-              vegan: false,
-            },
-            {
-              image: "../../assets/images/alligators.jpg",
-              alt: "Alligators",
-              title: "Alligators",
-              native: "Native to Southeastern U. S.",
-              text: "They are very dangeroгs.",
-              vegan: false,
-            }
-          ];
+        //   const petsCardData = [
+        //     {
+        //       image: "../../assets/images/pandas.jpg",
+        //       alt: "Giant Pandas",
+        //       title: "giant Pandas",
+        //       native: "Native to&nbsp;Southwest China",
+        //       text: "Giant pandas are bears and are members of&nbsp;the Order Carnivora.",
+        //       vegan: true,
+        //     },
+        //     {
+        //       image: "../../assets/images/sloth.jpg",
+        //       alt: "Sloth",
+        //       title: "Two-toed Sloth",
+        //       native: "Mesoamerica, South America",
+        //       text: "Sloths&mdash;the sluggish tree-dwellers of&nbsp;Central and South America&mdash;spend their lives in&nbsp;the tropical rain forests.",
+        //       vegan: true,
+        //     },
+        //     {
+        //       image: "../../assets/images/eagle.jpg",
+        //       alt: "Eagles",
+        //       title: "Eagles",
+        //       native: "Native to&nbsp;South America",
+        //       text: "Eagles choose a&nbsp;mate for life. They build large and strong nests, using branches.",
+        //       vegan: false,
+        //     },
+        //     {
+        //       image: "../../assets/images/cheetah.jpg",
+        //       alt: "Cheetahs",
+        //       title: "cheetahs",
+        //       native: "Native to&nbsp;Africa",
+        //       text: "Adult life for a&nbsp;cheetah in&nbsp;the wild is&nbsp;difficult.",
+        //       vegan: false,
+        //     },
+        //     {
+        //       image: "../../assets/images/gorilla.jpg",
+        //       alt: "Gorillas",
+        //       title: "Gorillas",
+        //       native: "Native to&nbsp;Congo",
+        //       text: "There are two species of&nbsp;gorilla, each containing two subspecies.",
+        //       vegan: true,
+        //     },
+        //     {
+        //       image: "../../assets/images/penguin.jpg",
+        //       alt: "Penguins",
+        //       title: "Penguins",
+        //       native: "Native to&nbsp;Antarctica",
+        //       text: "Penguins are a&nbsp;family of&nbsp;17&nbsp;to&nbsp;19&nbsp;species of&nbsp;birds that live primarily in&nbsp;the Southern Hemisphere.",
+        //       vegan: false,
+        //     },
+        //     {
+        //       image: "../../assets/images/alligators.jpg",
+        //       alt: "Alligators",
+        //       title: "Alligators",
+        //       native: "Native to Southeastern U. S.",
+        //       text: "They are very dangeroгs.",
+        //       vegan: false,
+        //     }
+        //   ];
 
-          const activeCard = document.querySelector('.swiper-slide-active');
-          const pestSlides = document.querySelectorAll('.pets__item')
-          // const petsCardsSubItems = document.querySelectorAll('.slide-visible .pats__wrap');
-          const nodeList = Array.from(pestSlides)
-          const cardsList = [];
+        //   const activeCard = document.querySelector('.swiper-slide-active');
+        //   const pestSlides = document.querySelectorAll('.pets__item')
+        //   // const petsCardsSubItems = document.querySelectorAll('.slide-visible .pats__wrap');
+        //   const nodeList = Array.from(pestSlides)
+        //   const cardsList = [];
 
-          for (let i = nodeList.indexOf(activeCard); i < nodeList.indexOf(activeCard) + 3; i++) {
-            cardsList.push(nodeList[i].children[0].children[0])
-            cardsList.push(nodeList[i].children[0].children[1])
-          }
+        //   for (let i = nodeList.indexOf(activeCard); i < nodeList.indexOf(activeCard) + 3; i++) {
+        //     cardsList.push(nodeList[i].children[0].children[0])
+        //     cardsList.push(nodeList[i].children[0].children[1])
+        //   }
 
-          const randomCardData = petsCardData.slice().sort(() => Math.random() - 0.5)
-          console.log('мы тут')
-          for (let i = 0; i < cardsList.length; i++) {
-            cardsList[i].innerHTML =
-              `
-                <article class="pats__wrap">
-                  <div class="pets__image">
-                    <img class="pets__img" src="${randomCardData[i].image}" alt="${randomCardData[i].alt}">
-                    <div class="pets__descr">
-                      <p class="pets__text">
-                        ${randomCardData[i].text}
-                      </p>
-                    </div>
-                  </div>
-                  <div class="pets__content">
-                    <h3 class="pets__title">${randomCardData[i].title}</h3>
-                    <span class="pets__native">${randomCardData[i].native}</span>
-                    <div class="${randomCardData[i].vegan ? "pets__food-vegan" : "pets__food-meat"}"></div>
-                  </div>
-                </article>
-              `
-          }
-        }
+        //   const randomCardData = petsCardData.slice().sort(() => Math.random() - 0.5)
+        //   console.log('мы тут')
+        //   for (let i = 0; i < cardsList.length; i++) {
+        //     cardsList[i].innerHTML =
+        //       `
+        //         <article class="pats__wrap">
+        //           <div class="pets__image">
+        //             <img class="pets__img" src="${randomCardData[i].image}" alt="${randomCardData[i].alt}">
+        //             <div class="pets__descr">
+        //               <p class="pets__text">
+        //                 ${randomCardData[i].text}
+        //               </p>
+        //             </div>
+        //           </div>
+        //           <div class="pets__content">
+        //             <h3 class="pets__title">${randomCardData[i].title}</h3>
+        //             <span class="pets__native">${randomCardData[i].native}</span>
+        //             <div class="${randomCardData[i].vegan ? "pets__food-vegan" : "pets__food-meat"}"></div>
+        //           </div>
+        //         </article>
+        //       `
+        //   }
+        // }
       }
     });
   }
